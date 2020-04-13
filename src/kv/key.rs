@@ -1,6 +1,10 @@
 //! Structured keys.
 
 use std::borrow::Borrow;
+#[cfg(feature = "mesalock_sgx")]
+use std::prelude::v1::*;
+
+use std::cmp;
 use std::fmt;
 
 /// A type that can be converted into a [`Key`](struct.Key.html).

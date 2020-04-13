@@ -7,6 +7,9 @@ extern crate sval;
 extern crate serde;
 
 use kv::{Error, Key, ToKey, ToValue, Value};
+#[cfg(feature = "mesalock_sgx")]
+use std::prelude::v1::*;
+
 use std::fmt;
 
 /// A source of key-value pairs.
